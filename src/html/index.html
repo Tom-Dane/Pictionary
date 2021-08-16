@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>你画我猜</title>
+    <link href="/css/index.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="/svg/favicon.ico" />
+  </head>
+
+  <body>
+    <h1>Tomcat's Pictionary</h1>
+
+    <!-- leaderboard -->
+    <section id="leaderboard">
+      <table width="100%"></table>
+    </section>
+
+    <!-- Chat -->
+    <section id="chatClient">
+      <div id="msgs"></div>
+
+      <form id="chat" method="POST"><input id="msg" type="text" name="message" autocomplete="off" /><br /></form>
+    </section>
+
+    <!-- Page container -->
+    <section>
+      <div id="page">
+        <table width="100%">
+          <tr>
+            <td id="turn"></td>
+            <td id="hint"></td>
+            <td id="countdown"></td>
+          </tr>
+        </table>
+        <canvas id="myCanvas" width="600" height="400"></canvas>
+      </div>
+      <div id="control">
+        <span>&nbsp;线宽&nbsp;</span>
+        <select id="width">
+          <option value="1">1</option>
+          <option value="3" selected="selected">2</option>
+          <option value="5">3</option>
+          <option value="7">4</option>
+          <option value="9">5</option>
+          <option value="11">6</option>
+        </select>
+        <span>&nbsp;颜色&nbsp;</span>
+        <select id="color">
+          <option value="black" selected="selected">黑色</option>
+          <option value="blue">蓝色</option>
+          <option value="red">红色</option>
+          <option value="green">绿色</option>
+          <option value="yellow">黄色</option>
+          <option value="gray">灰色</option></select
+        >&nbsp; <span>&nbsp;工具&nbsp;</span>
+        <select id="tools">
+          <option value="brush" selected="selected">笔刷(B)</option>
+          <option value="erase">橡皮(E)</option>
+          <!-- <option value="red">填涂(F)</option> --></select
+        >&nbsp;
+        <!-- <button type="button" id="undo">撤销(Z)</button> -->
+        <button type="button" id="clear">清空画板(C)</button>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+  </body>
+</html>

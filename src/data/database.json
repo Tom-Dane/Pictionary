@@ -1,0 +1,184 @@
+{
+    "data": [
+        {
+            "word": "对牛弹琴",
+            "category": "成语"
+        },
+        {
+            "word": "狗急跳墙",
+            "category": "成语"
+        },
+        {
+            "word": "抱头鼠窜",
+            "category": "成语"
+        },
+        {
+            "word": "黔驴技穷",
+            "category": "成语"
+        },
+        {
+            "word": "为虎作伥",
+            "category": "成语"
+        },
+        {
+            "word": "鹤立鸡群",
+            "category": "成语"
+        },
+        {
+            "word": "亡羊补牢",
+            "category": "成语"
+        },
+        {
+            "word": "守株待兔",
+            "category": "成语"
+        },
+        {
+            "word": "千军万马",
+            "category": "成语"
+        },
+        {
+            "word": "望梅止渴",
+            "category": "成语"
+        },
+        {
+            "word": "徐娘半老",
+            "category": "成语"
+        },
+        {
+            "word": "捶胸顿足",
+            "category": "成语"
+        },
+        {
+            "word": "扬州炒饭",
+            "category": "菜肴"
+        },
+        {
+            "word": "红烧肉",
+            "category": "菜肴"
+        },
+        {
+            "word": "麻婆豆腐",
+            "category": "菜肴"
+        },
+        {
+            "word": "糖醋排骨",
+            "category": "菜肴"
+        },
+        {
+            "word": "可乐鸡翅",
+            "category": "菜肴"
+        },
+        {
+            "word": "鱼香肉丝",
+            "category": "菜肴"
+        },
+        {
+            "word": "酸菜鱼",
+            "category": "菜肴"
+        },
+        {
+            "word": "回锅肉",
+            "category": "菜肴"
+        },
+        {
+            "word": "黑猫警长",
+            "category": "动画片"
+        },
+        {
+            "word": "猫和老鼠",
+            "category": "动画片"
+        },
+        {
+            "word": "神奇宝贝",
+            "category": "动画片"
+        },
+        {
+            "word": "奥特曼",
+            "category": "动画片"
+        },
+        {
+            "word": "葫芦娃",
+            "category": "动画片"
+        },
+        {
+            "word": "蜡笔小新",
+            "category": "动画片"
+        },
+        {
+            "word": "樱桃小丸子",
+            "category": "动画片"
+        },
+        {
+            "word": "海绵宝宝",
+            "category": "动画片"
+        },
+        {
+            "word": "诸葛亮",
+            "category": "历史人物"
+        },
+        {
+            "word": "岳飞",
+            "category": "历史人物"
+        },
+        {
+            "word": "慈禧",
+            "category": "历史人物"
+        },
+        {
+            "word": "李白",
+            "category": "历史人物"
+        },
+        {
+            "word": "廉颇",
+            "category": "历史人物"
+        },
+        {
+            "word": "鲁迅",
+            "category": "历史人物"
+        },
+        {
+            "word": "啤酒肚",
+            "category": "身体状态"
+        },
+        {
+            "word": "稻香",
+            "category": "歌曲名字"
+        },
+        {
+            "word": "勇气",
+            "category": "歌曲名字"
+        },
+        {
+            "word": "打气筒",
+            "category": "工具"
+        },
+        {
+            "word": "数钞票",
+            "category": "行为"
+        },
+        {
+            "word": "打麻将",
+            "category": "行为"
+        },
+        {
+            "word": "打呼噜",
+            "category": "行为"
+        },
+        {
+            "word": "扎马步",
+            "category": "行为"
+        },
+        {
+            "word": "击剑",
+            "category": "运动"
+        },
+        {
+            "word": "兵马俑",
+            "category": "文物古迹"
+        },
+        {
+            "word": "结婚证",
+            "category": "证件"
+        }
+    ]
+}
