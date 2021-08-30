@@ -8,9 +8,17 @@ $(function () {
   var socket = io();
 
   //禁用右键
-  document.oncontextmenu = function () {
+  document.oncontextmenu = () => {
     return false;
   };
+  document.onselectstart = () => {
+    return false;
+  };
+  document.ondragstart = () => {
+    return false;
+  };
+
+
   //滑轮调整画笔粗细
   document.onmousewheel = function (e) {
     var index = $("#width")[0].selectedIndex;
@@ -150,7 +158,7 @@ $(function () {
 
   //更新用户列表
   socket.on("update list", function (msg) {
-    $("#leaderboard").children("table").first().html(msg);
+    $("#leaderboard").html(msg);
   });
 
   //更新消息列表
@@ -181,7 +189,6 @@ $(function () {
       clearInterval(interval);
       interval = null;
     }
-    $("#turn").text("");
     $("#hint").text("");
     $("#countdown").text("");
   });

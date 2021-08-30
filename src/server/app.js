@@ -15,8 +15,8 @@ var round = 0;
 var seconds = 0;
 var playernum = 0;
 var interval = null;
-var draw_time = 90;
-var watch_time = 10;
+var draw_time = 70;
+var watch_time = 5;
 
 var wordlist = fs.readFileSync(path.resolve(__dirname, "..") + "/data/database.json").toString();
 var words;
