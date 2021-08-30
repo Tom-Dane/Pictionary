@@ -6,6 +6,7 @@ $(function () {
   var drawing = new Array();
   var status = false;
   var socket = io();
+  var myAudio = document.getElementById('myAudio');
 
   //禁用右键
   document.oncontextmenu = () => {
@@ -192,7 +193,10 @@ $(function () {
     $("#hint").text("");
     $("#countdown").text("");
   });
-
+  socket.on("update audio", function () {
+    myAudio.load();
+    myAudio.play();
+  });
   socket.on("update drawing", function (msg1, msg2, msg3) {
     ctx.lineWidth = msg2;
     ctx.strokeStyle = msg3;

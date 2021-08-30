@@ -73,7 +73,7 @@ function shuffle(array) {
 function start() {
   if (user_list.length > 1 && state == 0) {
     words = JSON.parse(wordlist);
-    shuffle(words.data);
+    shuffle(words);
     state = 1;
     showword = null;
     turn = 0;
@@ -100,7 +100,7 @@ function start() {
 function game() {
   if (state == 1) {
     user_list[turn].status = true;
-    showword = words.data.pop();
+    showword = words.pop();
     user_list[turn].socket.emit("update word", `轮到你绘画：${showword.word}(${showword.category})`);
     user_list[turn].socket.emit("update status", true);
     user_list[turn].socket.broadcast.emit("update word", `${showword.category},${showword.word.length}个字`);
@@ -187,6 +187,7 @@ app.use("/css", express.static(path.resolve(__dirname, "..") + "/css"));
 app.use("/font", express.static(path.resolve(__dirname, "..") + "/font"));
 app.use("/js", express.static(path.resolve(__dirname, "..") + "/js"));
 app.use("/svg", express.static(path.resolve(__dirname, "..") + "/svg"));
+app.use("/sound", express.static(path.resolve(__dirname, "..") + "/sound"));
 
 app.get("/", function (req, res) {
   res.sendFile(path.resolve(__dirname, "..") + "/html/index.html");
@@ -208,7 +209,7 @@ io.on("connection", function (socket) {
         user_list[index].avatar = Number(msg.substring(8));
         io.emit("update list", updatelist());
       } else if (msg == "-newword" && state == 1 && index == turn && guess == 0) {
-        showword = words.data.pop();
+        showword = words.pop();
         user_list[turn].socket.emit("update word", `轮到你绘画：${showword.word}(${showword.category})`);
         user_list[turn].socket.broadcast.emit("update word", `${showword.category},${showword.word.length}个字`);
         io.emit("update counter", draw_time);
@@ -222,6 +223,7 @@ io.on("connection", function (socket) {
           user_list[turn].score += 3;
           io.emit("update message", ["System", `${user_list[index].name}猜对了，加${get_score}分，${user_list[turn].name}加3分`]);
         } else io.emit("update message", ["System", `${user_list[index].name}猜对了，加${get_score}分`]);
+        io.emit("update audio");
         user_list[index].score += get_score;
         io.emit("update list", updatelist());
         if (guess >= playernum - 1) {
